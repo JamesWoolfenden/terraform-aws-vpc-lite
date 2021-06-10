@@ -1,0 +1,6 @@
+version: 0.1
+resource_usage:
+  module.vpc.aws_cloudwatch_log_group.flowlog:
+    monthly_data_ingested_gb: 0
+    monthly_data_scanned_gb: 0
+    storage_gb: 0
