@@ -1,6 +1,6 @@
 resource "aws_kms_key" "flowlog" {
   enable_key_rotation = true
-  policy=<<POLICY
+  policy              = <<POLICY
   {
  "Version": "2012-10-17",
     "Id": "key-default-1",
@@ -32,7 +32,7 @@ resource "aws_kms_key" "flowlog" {
                     "kms:EncryptionContext:aws:logs:arn": "arn:aws:logs:${local.region}:${local.account_id}:log-group:${local.log_name}"
                 }
             }
-        }    
+        }
     ]
 }
 POLICY

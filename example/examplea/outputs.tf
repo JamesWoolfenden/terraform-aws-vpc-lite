@@ -16,5 +16,5 @@ output "public_subnets" {
 }
 
 output "kms_key" {
-  value=aws_kms_key.flowlog
+  value = aws_kms_key.flowlog
 }
