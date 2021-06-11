@@ -1,5 +1,5 @@
 resource "aws_iam_role" "flowlog" {
-  name = "${var.account_name}-flowlog"
+  name_prefix = "${var.account_name}-flowlog-"
 
   assume_role_policy = <<EOF
 {

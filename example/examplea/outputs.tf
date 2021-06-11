@@ -14,3 +14,7 @@ output "public_subnets" {
 
   description = "The Public subnets id"
 }
+
+output "kms_key" {
+  value=aws_kms_key.flowlog
+}

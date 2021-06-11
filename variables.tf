@@ -30,8 +30,7 @@ variable "log_retention_in_days" {
 }
 
 
-variable "kms_key_id" {
-  type = string
+variable "kms_key" {
 }
 
 variable "ec2endpoint" {
