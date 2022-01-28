@@ -64,15 +64,16 @@ Project: .
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+
 ## Requirements
 
 No requirements.
 
 ## Providers
 
-| Name | Version |
-|------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
+| Name                                             | Version |
+| ------------------------------------------------ | ------- |
+| <a name="provider_aws"></a> [aws](#provider_aws) | n/a     |
 
 ## Modules
 
@@ -80,44 +81,45 @@ No modules.
 
 ## Resources
 
-| Name | Type |
-|------|------|
-| [aws_cloudwatch_log_group.flowlog](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_group) | resource |
-| [aws_default_security_group.main](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/default_security_group) | resource |
-| [aws_flow_log.example](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/flow_log) | resource |
-| [aws_iam_role.flowlog](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role) | resource |
-| [aws_iam_role_policy.flowlog](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy) | resource |
-| [aws_internet_gateway.gw](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/internet_gateway) | resource |
-| [aws_network_acl.networkaclpublic](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/network_acl) | resource |
-| [aws_route.public](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route) | resource |
-| [aws_route_table.public](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route_table) | resource |
-| [aws_route_table_association.public](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route_table_association) | resource |
-| [aws_subnet.public](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/subnet) | resource |
-| [aws_vpc.main](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc) | resource |
-| [aws_availability_zones.available](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/availability_zones) | data source |
+| Name                                                                                                                                      | Type        |
+| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| [aws_cloudwatch_log_group.flowlog](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_group)      | resource    |
+| [aws_default_security_group.main](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/default_security_group)     | resource    |
+| [aws_flow_log.example](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/flow_log)                              | resource    |
+| [aws_iam_role.flowlog](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role)                              | resource    |
+| [aws_iam_role_policy.flowlog](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy)                | resource    |
+| [aws_internet_gateway.gw](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/internet_gateway)                   | resource    |
+| [aws_network_acl.networkaclpublic](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/network_acl)               | resource    |
+| [aws_route.public](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route)                                     | resource    |
+| [aws_route_table.public](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route_table)                         | resource    |
+| [aws_route_table_association.public](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route_table_association) | resource    |
+| [aws_subnet.public](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/subnet)                                   | resource    |
+| [aws_vpc.main](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc)                                           | resource    |
+| [aws_availability_zones.available](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/availability_zones)     | data source |
 
 ## Inputs
 
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
-| <a name="input_account_name"></a> [account\_name](#input\_account\_name) | The Name of the Account | `string` | n/a | yes |
-| <a name="input_cidr"></a> [cidr](#input\_cidr) | The range to be associated with the VPC and cleaved into the subnets | `string` | n/a | yes |
-| <a name="input_ec2endpoint"></a> [ec2endpoint](#input\_ec2endpoint) | Toggles for ec2 VPC endpoint | `number` | `1` | no |
-| <a name="input_kms_key"></a> [kms\_key](#input\_kms\_key) | n/a | `any` | n/a | yes |
-| <a name="input_log_retention_in_days"></a> [log\_retention\_in\_days](#input\_log\_retention\_in\_days) | n/a | `number` | `90` | no |
-| <a name="input_s3endpoint"></a> [s3endpoint](#input\_s3endpoint) | Toggles for s3 VPC endpoint | `number` | `1` | no |
-| <a name="input_subnets"></a> [subnets](#input\_subnets) | The number of subnets required, less than or equal to the number of availability zones | `number` | `3` | no |
-| <a name="input_zone"></a> [zone](#input\_zone) | Availability zone names | `list(any)` | n/a | yes |
+| Name                                                                                             | Description                                                                            | Type        | Default | Required |
+| ------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------- | ----------- | ------- | :------: |
+| <a name="input_account_name"></a> [account_name](#input_account_name)                            | The Name of the Account                                                                | `string`    | n/a     |   yes    |
+| <a name="input_cidr"></a> [cidr](#input_cidr)                                                    | The range to be associated with the VPC and cleaved into the subnets                   | `string`    | n/a     |   yes    |
+| <a name="input_ec2endpoint"></a> [ec2endpoint](#input_ec2endpoint)                               | Toggles for ec2 VPC endpoint                                                           | `number`    | `1`     |    no    |
+| <a name="input_kms_key"></a> [kms_key](#input_kms_key)                                           | n/a                                                                                    | `any`       | n/a     |   yes    |
+| <a name="input_log_retention_in_days"></a> [log_retention_in_days](#input_log_retention_in_days) | n/a                                                                                    | `number`    | `90`    |    no    |
+| <a name="input_s3endpoint"></a> [s3endpoint](#input_s3endpoint)                                  | Toggles for s3 VPC endpoint                                                            | `number`    | `1`     |    no    |
+| <a name="input_subnets"></a> [subnets](#input_subnets)                                           | The number of subnets required, less than or equal to the number of availability zones | `number`    | `3`     |    no    |
+| <a name="input_zone"></a> [zone](#input_zone)                                                    | Availability zone names                                                                | `list(any)` | n/a     |   yes    |
 
 ## Outputs
 
-| Name | Description |
-|------|-------------|
-| <a name="output_public"></a> [public](#output\_public) | The Public Subnets |
-| <a name="output_public_cidrs"></a> [public\_cidrs](#output\_public\_cidrs) | The CIDR ranges for your public subnets |
-| <a name="output_public_subnets"></a> [public\_subnets](#output\_public\_subnets) | The IDs of your public subnets |
-| <a name="output_vpc"></a> [vpc](#output\_vpc) | The Full VPC |
-| <a name="output_vpc_id"></a> [vpc\_id](#output\_vpc\_id) | The ID of your selected VPC |
+| Name                                                                          | Description                             |
+| ----------------------------------------------------------------------------- | --------------------------------------- |
+| <a name="output_public"></a> [public](#output_public)                         | The Public Subnets                      |
+| <a name="output_public_cidrs"></a> [public_cidrs](#output_public_cidrs)       | The CIDR ranges for your public subnets |
+| <a name="output_public_subnets"></a> [public_subnets](#output_public_subnets) | The IDs of your public subnets          |
+| <a name="output_vpc"></a> [vpc](#output_vpc)                                  | The Full VPC                            |
+| <a name="output_vpc_id"></a> [vpc_id](#output_vpc_id)                         | The ID of your selected VPC             |
+
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Instructions
@@ -142,7 +144,7 @@ Please use the [issue tracker](https://github.com/jameswoolfenden/terraform-aws-
 
 ## Copyrights
 
-Copyright © 2019-2021 James Woolfenden
+Copyright © 2019-2022 James Woolfenden
 
 ## License
 
