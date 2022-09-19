@@ -64,16 +64,15 @@ Project: .
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-
 ## Requirements
 
 No requirements.
 
 ## Providers
 
-| Name                                             | Version |
-| ------------------------------------------------ | ------- |
-| <a name="provider_aws"></a> [aws](#provider_aws) | n/a     |
+| Name | Version |
+|------|---------|
+| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
 
 ## Modules
 
@@ -81,45 +80,44 @@ No modules.
 
 ## Resources
 
-| Name                                                                                                                                      | Type        |
-| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| [aws_cloudwatch_log_group.flowlog](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_group)      | resource    |
-| [aws_default_security_group.main](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/default_security_group)     | resource    |
-| [aws_flow_log.example](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/flow_log)                              | resource    |
-| [aws_iam_role.flowlog](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role)                              | resource    |
-| [aws_iam_role_policy.flowlog](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy)                | resource    |
-| [aws_internet_gateway.gw](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/internet_gateway)                   | resource    |
-| [aws_network_acl.networkaclpublic](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/network_acl)               | resource    |
-| [aws_route.public](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route)                                     | resource    |
-| [aws_route_table.public](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route_table)                         | resource    |
-| [aws_route_table_association.public](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route_table_association) | resource    |
-| [aws_subnet.public](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/subnet)                                   | resource    |
-| [aws_vpc.main](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc)                                           | resource    |
-| [aws_availability_zones.available](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/availability_zones)     | data source |
+| Name | Type |
+|------|------|
+| [aws_cloudwatch_log_group.flowlog](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_group) | resource |
+| [aws_default_security_group.main](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/default_security_group) | resource |
+| [aws_flow_log.example](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/flow_log) | resource |
+| [aws_iam_role.flowlog](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role) | resource |
+| [aws_iam_role_policy.flowlog](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy) | resource |
+| [aws_internet_gateway.gw](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/internet_gateway) | resource |
+| [aws_network_acl.networkaclpublic](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/network_acl) | resource |
+| [aws_route.public](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route) | resource |
+| [aws_route_table.public](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route_table) | resource |
+| [aws_route_table_association.public](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route_table_association) | resource |
+| [aws_subnet.public](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/subnet) | resource |
+| [aws_vpc.main](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc) | resource |
+| [aws_availability_zones.available](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/availability_zones) | data source |
 
 ## Inputs
 
-| Name                                                                                             | Description                                                                            | Type        | Default | Required |
-| ------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------- | ----------- | ------- | :------: |
-| <a name="input_account_name"></a> [account_name](#input_account_name)                            | The Name of the Account                                                                | `string`    | n/a     |   yes    |
-| <a name="input_cidr"></a> [cidr](#input_cidr)                                                    | The range to be associated with the VPC and cleaved into the subnets                   | `string`    | n/a     |   yes    |
-| <a name="input_ec2endpoint"></a> [ec2endpoint](#input_ec2endpoint)                               | Toggles for ec2 VPC endpoint                                                           | `number`    | `1`     |    no    |
-| <a name="input_kms_key"></a> [kms_key](#input_kms_key)                                           | n/a                                                                                    | `any`       | n/a     |   yes    |
-| <a name="input_log_retention_in_days"></a> [log_retention_in_days](#input_log_retention_in_days) | n/a                                                                                    | `number`    | `90`    |    no    |
-| <a name="input_s3endpoint"></a> [s3endpoint](#input_s3endpoint)                                  | Toggles for s3 VPC endpoint                                                            | `number`    | `1`     |    no    |
-| <a name="input_subnets"></a> [subnets](#input_subnets)                                           | The number of subnets required, less than or equal to the number of availability zones | `number`    | `3`     |    no    |
-| <a name="input_zone"></a> [zone](#input_zone)                                                    | Availability zone names                                                                | `list(any)` | n/a     |   yes    |
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_account_name"></a> [account\_name](#input\_account\_name) | The Name of the Account | `string` | n/a | yes |
+| <a name="input_cidr"></a> [cidr](#input\_cidr) | The range to be associated with the VPC and cleaved into the subnets | `string` | n/a | yes |
+| <a name="input_ec2endpoint"></a> [ec2endpoint](#input\_ec2endpoint) | Toggles for ec2 VPC endpoint | `number` | `1` | no |
+| <a name="input_kms_key"></a> [kms\_key](#input\_kms\_key) | n/a | `any` | n/a | yes |
+| <a name="input_log_retention_in_days"></a> [log\_retention\_in\_days](#input\_log\_retention\_in\_days) | n/a | `number` | `90` | no |
+| <a name="input_s3endpoint"></a> [s3endpoint](#input\_s3endpoint) | Toggles for s3 VPC endpoint | `number` | `1` | no |
+| <a name="input_subnets"></a> [subnets](#input\_subnets) | The number of subnets required, less than or equal to the number of availability zones | `number` | `3` | no |
+| <a name="input_zone"></a> [zone](#input\_zone) | Availability zone names | `list(any)` | n/a | yes |
 
 ## Outputs
 
-| Name                                                                          | Description                             |
-| ----------------------------------------------------------------------------- | --------------------------------------- |
-| <a name="output_public"></a> [public](#output_public)                         | The Public Subnets                      |
-| <a name="output_public_cidrs"></a> [public_cidrs](#output_public_cidrs)       | The CIDR ranges for your public subnets |
-| <a name="output_public_subnets"></a> [public_subnets](#output_public_subnets) | The IDs of your public subnets          |
-| <a name="output_vpc"></a> [vpc](#output_vpc)                                  | The Full VPC                            |
-| <a name="output_vpc_id"></a> [vpc_id](#output_vpc_id)                         | The ID of your selected VPC             |
-
+| Name | Description |
+|------|-------------|
+| <a name="output_public"></a> [public](#output\_public) | The Public Subnets |
+| <a name="output_public_cidrs"></a> [public\_cidrs](#output\_public\_cidrs) | The CIDR ranges for your public subnets |
+| <a name="output_public_subnets"></a> [public\_subnets](#output\_public\_subnets) | The IDs of your public subnets |
+| <a name="output_vpc"></a> [vpc](#output\_vpc) | The Full VPC |
+| <a name="output_vpc_id"></a> [vpc\_id](#output\_vpc\_id) | The ID of your selected VPC |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Policy
@@ -127,6 +125,97 @@ No modules.
 This is the policy required to build this project:
 
 <!-- BEGINNING OF PRE-COMMIT-PIKE DOCS HOOK -->
+The Terraform resource required is:
+
+```golang
+resource "aws_iam_policy" "terraform_pike" {
+  name_prefix = "terraform_pike"
+  path        = "/"
+  description = "Pike Autogenerated policy from IAC"
+
+  policy = jsonencode({
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "ec2:AssociateRouteTable",
+                "ec2:AttachInternetGateway",
+                "ec2:AuthorizeSecurityGroupEgress",
+                "ec2:AuthorizeSecurityGroupIngress",
+                "ec2:CreateFlowLogs",
+                "ec2:CreateInternetGateway",
+                "ec2:CreateNetworkAcl",
+                "ec2:CreateNetworkAclEntry",
+                "ec2:CreateRoute",
+                "ec2:CreateRouteTable",
+                "ec2:CreateSubnet",
+                "ec2:CreateTags",
+                "ec2:CreateVPC",
+                "ec2:DeleteFlowLogs",
+                "ec2:DeleteInternetGateway",
+                "ec2:DeleteNetworkAcl",
+                "ec2:DeleteRoute",
+                "ec2:DeleteRouteTable",
+                "ec2:DeleteSubnet",
+                "ec2:DeleteTags",
+                "ec2:DeleteVPC",
+                "ec2:DescribeAccountAttributes",
+                "ec2:DescribeAvailabilityZones",
+                "ec2:DescribeFlowLogs",
+                "ec2:DescribeInternetGateways",
+                "ec2:DescribeNetworkAcls",
+                "ec2:DescribeRouteTables",
+                "ec2:DescribeSecurityGroups",
+                "ec2:DescribeSubnets",
+                "ec2:DescribeVpcAttribute",
+                "ec2:DescribeVpcs",
+                "ec2:DetachInternetGateway",
+                "ec2:DisassociateRouteTable",
+                "ec2:RevokeSecurityGroupEgress",
+                "ec2:RevokeSecurityGroupIngress"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": [
+                "iam:CreateRole",
+                "iam:DeleteRole",
+                "iam:DeleteRolePolicy",
+                "iam:GetRole",
+                "iam:GetRolePolicy",
+                "iam:ListAttachedRolePolicies",
+                "iam:ListInstanceProfilesForRole",
+                "iam:ListRolePolicies",
+                "iam:PassRole",
+                "iam:PutRolePolicy"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "VisualEditor2",
+            "Effect": "Allow",
+            "Action": [
+                "logs:AssociateKmsKey",
+                "logs:CreateLogGroup",
+                "logs:DeleteLogGroup",
+                "logs:DeleteRetentionPolicy",
+                "logs:DescribeLogGroups",
+                "logs:DisassociateKmsKey",
+                "logs:ListTagsLogGroup",
+                "logs:PutRetentionPolicy"
+            ],
+            "Resource": "*"
+        }
+    ]
+})
+}
+
+
+```
 <!-- END OF PRE-COMMIT-PIKE DOCS HOOK -->
 
 ## Related Projects
