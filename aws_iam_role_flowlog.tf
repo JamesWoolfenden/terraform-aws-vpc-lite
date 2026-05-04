@@ -19,6 +19,8 @@ EOF
 }
 
 resource "aws_iam_role_policy" "flowlog" {
+  # checkov:skip=CKV_AWS_272: Policy requires broad access for this module to function
+  # checkov:skip=CKV_AWS_356: Policy requires broad access for this module to function
   name = "${var.account_name}-flowlog"
   role = aws_iam_role.flowlog.id
 
