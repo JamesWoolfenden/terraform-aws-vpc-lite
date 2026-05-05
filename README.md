@@ -141,6 +141,7 @@ resource "aws_iam_policy" "terraform_pike" {
             "Effect": "Allow",
             "Action": [
                 "ec2:AssociateRouteTable",
+                "ec2:AssociateSubnetCidrBlock",
                 "ec2:AttachInternetGateway",
                 "ec2:AuthorizeSecurityGroupEgress",
                 "ec2:AuthorizeSecurityGroupIngress",
@@ -166,6 +167,7 @@ resource "aws_iam_policy" "terraform_pike" {
                 "ec2:DescribeFlowLogs",
                 "ec2:DescribeInternetGateways",
                 "ec2:DescribeNetworkAcls",
+                "ec2:DescribeNetworkInterfaces",
                 "ec2:DescribeRouteTables",
                 "ec2:DescribeSecurityGroups",
                 "ec2:DescribeSubnets",
@@ -173,10 +175,18 @@ resource "aws_iam_policy" "terraform_pike" {
                 "ec2:DescribeVpcs",
                 "ec2:DetachInternetGateway",
                 "ec2:DisassociateRouteTable",
+                "ec2:DisassociateSubnetCidrBlock",
+                "ec2:ModifySubnetAttribute",
+                "ec2:ModifyVpcAttribute",
+                "ec2:ModifyVpcTenancy",
+                "ec2:ReplaceRoute",
+                "ec2:ReplaceRouteTableAssociation",
                 "ec2:RevokeSecurityGroupEgress",
                 "ec2:RevokeSecurityGroupIngress"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         },
         {
             "Sid": "VisualEditor1",
@@ -193,22 +203,28 @@ resource "aws_iam_policy" "terraform_pike" {
                 "iam:PassRole",
                 "iam:PutRolePolicy"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         },
         {
             "Sid": "VisualEditor2",
             "Effect": "Allow",
             "Action": [
                 "logs:AssociateKmsKey",
+                "logs:CreateLogDelivery",
                 "logs:CreateLogGroup",
                 "logs:DeleteLogGroup",
                 "logs:DeleteRetentionPolicy",
                 "logs:DescribeLogGroups",
                 "logs:DisassociateKmsKey",
+                "logs:ListTagsForResource",
                 "logs:ListTagsLogGroup",
                 "logs:PutRetentionPolicy"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 })
