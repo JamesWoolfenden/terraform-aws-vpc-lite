@@ -1,4 +1,5 @@
 resource "aws_network_acl" "networkaclpublic" {
+  # checkov:skip=CKV2_AWS_1: subnet_ids is set via splat; checkov cannot resolve the attachment
   vpc_id     = aws_vpc.main.id
   subnet_ids = aws_subnet.public.*.id
 

@@ -1,13 +1,11 @@
 # terraform-aws-vpc-lite
 
-[![Build Status](https://github.com/JamesWoolfenden/terraform-aws-vpc-lite/workflows/Verify%20and%20Bump/badge.svg?branch=master)](https://github.com/JamesWoolfenden/terraform-aws-vpc-lite)
+[![Build Status](https://github.com/JamesWoolfenden/terraform-aws-vpc-lite/workflows/Verify/badge.svg?branch=main)](https://github.com/JamesWoolfenden/terraform-aws-vpc-lite)
 [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-vpc-lite.svg)](https://github.com/JamesWoolfenden/terraform-aws-vpc-lite/releases/latest)
 [![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/JamesWoolfenden/terraform-aws-vpc-lite.svg?label=latest)](https://github.com/JamesWoolfenden/terraform-aws-vpc-lite/releases/latest)
 ![Terraform Version](https://img.shields.io/badge/tf-%3E%3D0.14.0-blue.svg)
-[![Infrastructure Tests](https://www.bridgecrew.cloud/badges/github/JamesWoolfenden/terraform-aws-vpc-lite/cis_aws)](https://www.bridgecrew.cloud/link/badge?vcs=github&fullRepo=JamesWoolfenden%2Fterraform-aws-vpc-lite&benchmark=CIS+AWS+V1.2)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![checkov](https://img.shields.io/badge/checkov-verified-brightgreen)](https://www.checkov.io/)
-[![Infrastructure Tests](https://www.bridgecrew.cloud/badges/github/jameswoolfenden/terraform-aws-vpc-lite/general)](https://www.bridgecrew.cloud/link/badge?vcs=github&fullRepo=JamesWoolfenden%2Fterraform-aws-vpc-lite&benchmark=INFRASTRUCTURE+SECURITY)
 
 This module is to create a VPC, Sub-nets and routes for your standard AWS VPC pattern. It also implements the default tag scheme and calculates the breakdown of your CIDR.
 This module defaults to creating 3 public sub-nets, or optionally less.
@@ -71,7 +69,7 @@ No requirements.
 ## Providers
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
 
 ## Modules
@@ -81,7 +79,7 @@ No modules.
 ## Resources
 
 | Name | Type |
-|------|------|
+| ---- | ---- |
 | [aws_cloudwatch_log_group.flowlog](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_group) | resource |
 | [aws_default_security_group.main](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/default_security_group) | resource |
 | [aws_flow_log.example](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/flow_log) | resource |
@@ -99,7 +97,7 @@ No modules.
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
+| ---- | ----------- | ---- | ------- | :------: |
 | <a name="input_account_name"></a> [account\_name](#input\_account\_name) | The Name of the Account | `string` | n/a | yes |
 | <a name="input_cidr"></a> [cidr](#input\_cidr) | The range to be associated with the VPC and cleaved into the subnets | `string` | n/a | yes |
 | <a name="input_ec2endpoint"></a> [ec2endpoint](#input\_ec2endpoint) | Toggles for ec2 VPC endpoint | `number` | `1` | no |
@@ -112,7 +110,7 @@ No modules.
 ## Outputs
 
 | Name | Description |
-|------|-------------|
+| ---- | ----------- |
 | <a name="output_public"></a> [public](#output\_public) | The Public Subnets |
 | <a name="output_public_cidrs"></a> [public\_cidrs](#output\_public\_cidrs) | The CIDR ranges for your public subnets |
 | <a name="output_public_subnets"></a> [public\_subnets](#output\_public\_subnets) | The IDs of your public subnets |
